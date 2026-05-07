@@ -1,0 +1,17 @@
+{
+  "pack_id": "pagepack_chigui",
+  "pages": [
+    {
+      "page_id": "page_global_page_controls",
+      "page_name": "global_page_controls",
+      "page_path": "page_global_page_controls/global_page_controls_page.py",
+      "page_class": "PageGlobalPageControls"
+    },
+    {
+      "page_id": "page_theme_organizer",
+      "page_name": "theme_organizer",
+      "page_path": "page_theme_organizer/theme_organizer_page.py",
+      "page_class": "PageThemeOrganizer"
+    }
+  ]
+}

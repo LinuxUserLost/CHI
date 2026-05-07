@@ -1,0 +1,40 @@
+{
+  "pack_id": "chiflippin0",
+  "pages": [
+    {
+      "page_id": "transporthub",
+      "page_name": "transporthub",
+      "page_title": "Transport Hub",
+      "page_path": "page_transporthub/transporthub_page.py",
+      "page_class": "TransportHubPage"
+    },
+    {
+      "page_id": "rpcinfo",
+      "page_name": "rpcinfo",
+      "page_title": "RPC Info",
+      "page_path": "page_rpcinfo/rpcinfo_page.py",
+      "page_class": "RpcInfoPage"
+    },
+    {
+      "page_id": "devboardtools",
+      "page_name": "devboardtools",
+      "page_title": "Devboard Tools",
+      "page_path": "page_devboardtools/devboardtools_page.py",
+      "page_class": "DevboardToolsPage"
+    },
+    {
+      "page_id": "bluetoothstatus",
+      "page_name": "bluetoothstatus",
+      "page_title": "Bluetooth Status",
+      "page_path": "page_bluetoothstatus/bluetoothstatus_page.py",
+      "page_class": "BluetoothStatusPage"
+    },
+    {
+      "page_id": "storagebrowser",
+      "page_name": "storagebrowser",
+      "page_title": "Storage Browser",
+      "page_path": "page_storagebrowser/storagebrowser_page.py",
+      "page_class": "StorageBrowserPage"
+    }
+  ]
+}

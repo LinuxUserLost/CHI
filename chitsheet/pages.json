@@ -1,0 +1,26 @@
+{
+  "pack_id": "pagepack_chitsheet",
+  "pages": [
+    {
+      "page_id": "page_build_history_viewer",
+      "page_name": "build_history_viewer",
+      "page_path": "page_build_history_viewer/build_history_viewer_page.py",
+      "page_class": "PageBuildHistoryViewer",
+      "page_title": "Build History Bridge"
+    },
+    {
+      "page_id": "page_dependency_tracker",
+      "page_name": "dependency_tracker",
+      "page_path": "page_dependency_tracker/dependency_tracker_page.py",
+      "page_class": "PageDependencyTracker",
+      "page_title": "Dependency Tracker"
+    },
+    {
+      "page_id": "page_project_plans_viewer",
+      "page_name": "project_plans_viewer",
+      "page_path": "page_project_plans_viewer/project_plans_viewer_page.py",
+      "page_class": "PageProjectPlansViewer",
+      "page_title": "03 Project Plans Viewer"
+    }
+  ]
+}

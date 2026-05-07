@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude local/session files
+.claude/
+
+# Old snapshots / staging copies
+000 to be zipped/
+000 to be zipped.zip
+_STALE_*.bak
+
+# Logs / temporary files
+*.log
+*.tmp
+.DS_Store
+
+# Runtime-generated registry (machine-specific paths, rebuilt on launch)
+guichi_files/state/registry.json
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local AI/session helper files
+CLAUDE.md
+builderquestion.md
+claudenotes/

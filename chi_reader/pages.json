@@ -1,0 +1,17 @@
+{
+  "pack_id": "pagepack_chireader",
+  "pages": [
+    {
+      "page_id": "page_tts_qwen",
+      "page_name": "TTS Qwen",
+      "page_path": "page_tts_qwen/tts_qwen_page.py",
+      "page_class": "TTSQwenPage"
+    },
+    {
+      "page_id": "page_qwen_tts",
+      "page_name": "Qwen TTS",
+      "page_path": "page_qwen_tts/qwen_tts_page.py",
+      "page_class": "QwenTTSPage"
+    }
+  ]
+}

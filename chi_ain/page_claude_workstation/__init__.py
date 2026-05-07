@@ -1,0 +1,2 @@
+from .claude_workstation_page import PageClaudeWorkstation
+
