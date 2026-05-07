@@ -1,54 +1,92 @@
 # CHI
 
-CHI is a low-dependency Python/Tkinter GUI shell for loading and organizing modular tool packs.
+CHI is a Python/Tkinter GUI shell for organizing small tool packs into one desktop workspace.
 
-The project is built around a simple idea: keep the shell small, keep tools separated into folders, and let the GUI discover/load packs when it can find the correct manifest and page registry files.
+The project started as a more manual Python control layer around CLI AI workflows, then grew into a modular shell as I learned more about GUI structure, local workflow design, and the hardware/runtime limits of different environments. Today its strongest area is Linux-side workflow control: terminal-oriented utilities, repeatable local tasks, and a shell structure that can load separate tool areas without folding everything into one file.
 
-This is a working prototype and portfolio checkpoint. It is not a finished application.
+This is an active solo project and a working prototype, not a finished application.
 
-## Current Status
+## Current State
 
-CHI is under active development.
+CHI already includes:
 
-The current version includes a GUI shell, page discovery, page loading, theme work, interaction helpers, Git workflow pages, Linux utility pages, AI/prompt pages, reading/TTS experiments, and hardware/device workflow drafts.
+- a Tkinter shell with pack discovery, registry, and page loading
+- modular pagepacks discovered through `module_manifest.json` and `pages.json`
+- Linux workflow pages for terminal, network, audio, browser, and monitor-related utilities
+- supporting tool areas for AI workflows, Git utilities, reading/TTS experiments, planning/log viewing, and hardware/device experiments
+- shell-level theme and interaction work that is still being refined
 
-Many pages are usable drafts. Some pages include extra tabs for testing new workflow ideas or future features. Theme support is currently being updated so pages can work more consistently across the whole shell.
+The current code is usable in places, uneven in others, and still moving toward a more consistent layout and workflow feel across the whole shell.
 
-## Project Background
+## What CHI Is For
 
-This is my first major program.
+The main goal is to turn throwaway scripts and one-off workflow helpers into a reusable local platform.
 
-It began as a smaller Linux/Python workflow for AI chat capture, prompt presets, clipboard cleanup, terminal helpers, and local note organization. It later grew into a modular desktop GUI where separate tools can be loaded as page packs.
+Instead of keeping everything as separate experiments, CHI groups tools into packs and lets the shell discover and load them when the required manifest and page registry files are present. That keeps tool areas separated while still letting them live inside one interface.
 
-The repository history reflects the real development timeline, including breaks, lighter weeks, and checkpoint uploads.
+The current project direction is practical rather than abstract:
 
-## Design Goals
+- make local Linux tasks easier to repeat
+- keep terminal-oriented workflows visible instead of hiding everything behind opaque automation
+- preserve room for experiments without forcing the whole shell to be redesigned every time a new tool area appears
 
-- Python-first
-- low dependency
-- local-first
-- modular folders
-- readable project structure
-- easy checkpointing with Git
-- tools that can be added, removed, or tested without rewriting the whole app
-- useful on a normal Linux desktop, but organized with portable/mobile workflows in mind
+## Main Areas
 
-## Why the Directory Structure Matters
+### `chi_los`
 
-CHI is organized around packs and pages because the shell is meant to load tools from folders instead of hardcoding every tool into one large file.
+The strongest current module. This pack is centered on Linux-side workflow control and includes pages related to terminal sessions, network control, audio routing, browser/bookmark utilities, and monitor management.
 
-The GUI shell can load a pack when it can find the required discovery files, such as:
+This area best represents the current direction of CHI: a GUI shell for reusing local system workflows while keeping the underlying command/task structure easier to inspect and grow over time.
+
+### `chi_gui`
+
+Shell-facing GUI support pages, currently focused on things like global page controls and theme organization. This area matters because the shell is usable now, but its visual consistency and overall layout are still being improved.
+
+### `chi_ain`
+
+AI-adjacent workflow pages, including prompt, markdown, terminal, and local model interface surfaces. This area reflects where the project started, but it is no longer the only identity of CHI.
+
+### `chitsheet`
+
+A newer support pack for viewing plans, logs, build-history material, and related project references from inside the shell. It is useful for the broader workflow idea behind CHI, but it is still early and less polished than the core shell/workflow surfaces.
+
+### Secondary Areas
+
+- `chi_git`: Git-oriented helper pages and workflow experiments
+- `chi_reader`: reading and TTS experiments
+- `chi_flippin0`: early hardware/device workflow pages related to Flipper Zero work
+- `chiside_guide` and `chiside_jsondisplayer`: side windows that support shell navigation and inspection
+
+These are real parts of the project, but they are not equally mature or equally central to the current direction.
+
+## Structure
+
+CHI keeps the shell small and uses folder-based discovery for packs and pages.
+
+The shell looks for files such as:
 
 - `module_manifest.json`
 - `pages.json`
 
-The page registry tells the shell what page files and page classes exist. The loader then imports the page and tries the supported GUI mount methods.
+Those files tell the loader what a pack contains and which page classes should be imported. This keeps tool areas modular and makes it easier to add, remove, or revise packs without rewriting the whole shell entry point.
 
-This makes it possible to keep different tool areas separated, such as Linux tools, Git tools, AI tools, reading tools, theme tools, and hardware/device tools.
+## In Progress
 
-## Core Shell
+The current work is mostly about refinement rather than a ground-up rewrite:
 
-The main shell entry point is:
+- making the shell layout feel more intentional and consistent
+- improving theme behavior across different pages
+- tightening workflow pages so they feel less like isolated experiments and more like parts of one platform
+- deciding which exploratory tools should stay lightweight and which should become more fully developed modules
+
+## Running CHI
+
+The current shell entry point is:
 
 ```bash
-python guichi.py
+python3 guichi.py
+```
+
+CHI is currently designed around a local Linux Python environment with Tkinter available.
+
+For practical run/setup notes, see [INSTRUCTIONS.md](/media/min/Claude/01_project_workshop/CHI_public_upload/INSTRUCTIONS.md:1).
