@@ -1,0 +1,13 @@
+{
+  "id": "23f7d825-73ae-4a80-a0a1-f885a68000e0",
+  "title": "Speed Test (curl fallback)",
+  "command": "tmpfile=\"$(mktemp)\"; metrics=\"$(curl -L --output \"$tmpfile\" --silent --show-error --write-out 'DL_BYTES=%{size_download}\\nDL_SECONDS=%{time_total}\\nDL_MPS=%{speed_download}\\n' https://speed.hetzner.de/10MB.bin)\"; rc=$?; rm -f \"$tmpfile\"; printf 'BACKEND=curl\\n%s' \"$metrics\"; python3 -c 'import re,sys; text=sys.stdin.read(); m=re.search(r\"DL_MPS=([0-9.]+)\", text); print(\"DOWNLOAD_MBPS=\" + (f\"{float(m.group(1))*8/1000000:.2f}\" if m else \"unknown\"))' <<'EOF'\n$metrics\nEOF",
+  "notes": "Dependency-light speed test using curl against a public test file. Prints normalized markers so the Network Control page can summarize the result.",
+  "verify_command": "",
+  "requires_sudo": false,
+  "risk_level": "low",
+  "host_scope": "general_linux",
+  "procedure_group": "network",
+  "created_at": "2026-05-06T00:00:00",
+  "updated_at": "2026-05-06T00:00:00"
+}

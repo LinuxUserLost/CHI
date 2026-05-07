@@ -1,0 +1,13 @@
+{
+  "id": "6aeeaf6c-b3b9-47dd-8bb8-a7f34dc0a221",
+  "title": "WireGuard Apply Profile",
+  "command": "sudo wg-quick up {{profile_path}}",
+  "notes": "Apply a WireGuard profile chosen from the Network Control page. The page resolves {{profile_path}} at runtime from the user-picked file.",
+  "verify_command": "",
+  "requires_sudo": true,
+  "risk_level": "medium",
+  "host_scope": "general_linux",
+  "procedure_group": "network",
+  "created_at": "2026-05-06T00:00:00",
+  "updated_at": "2026-05-06T00:00:00"
+}

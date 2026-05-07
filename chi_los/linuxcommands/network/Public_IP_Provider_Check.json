@@ -1,0 +1,13 @@
+{
+  "id": "e6eb2cb4-db5f-4804-b59e-112ff28e9962",
+  "title": "Public IP / Provider Check",
+  "command": "curl -fsSL https://ipinfo.io/json | python3 -c 'import json,sys; data=json.load(sys.stdin); print(\"PUBLIC_IP=\" + str(data.get(\"ip\", \"unknown\"))); print(\"PUBLIC_ORG=\" + str(data.get(\"org\", \"provider unknown\"))); print(json.dumps(data, indent=2, ensure_ascii=False))'",
+  "notes": "Fetch current public IP and provider/organization info with normalized markers plus the raw JSON body.",
+  "verify_command": "",
+  "requires_sudo": false,
+  "risk_level": "low",
+  "host_scope": "general_linux",
+  "procedure_group": "network",
+  "created_at": "2026-05-06T00:00:00",
+  "updated_at": "2026-05-06T00:00:00"
+}

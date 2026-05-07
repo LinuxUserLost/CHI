@@ -1,0 +1,13 @@
+{
+  "id": "037b52b6-f799-4a39-a4c0-71c6aafd4ef9",
+  "title": "WireGuard Disconnect Profile",
+  "command": "sudo wg-quick down {{profile_path}}",
+  "notes": "Disconnect the currently active local WireGuard profile tracked by the Network Control page. The page resolves {{profile_path}} at runtime.",
+  "verify_command": "",
+  "requires_sudo": true,
+  "risk_level": "medium",
+  "host_scope": "general_linux",
+  "procedure_group": "network",
+  "created_at": "2026-05-06T00:00:00",
+  "updated_at": "2026-05-06T00:00:00"
+}

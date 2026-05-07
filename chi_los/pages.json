@@ -1,0 +1,35 @@
+{
+  "pack_id": "pagepack_chilos",
+  "pages": [
+    {
+      "page_id": "page_network_control",
+      "page_name": "network_control",
+      "page_path": "page_network_control/network_control_page.py",
+      "page_class": "PageNetworkControl"
+    },
+    {
+      "page_id": "page_terminal_session",
+      "page_name": "terminal_session",
+      "page_path": "page_terminal_session/terminal_session_page.py",
+      "page_class": "PageTerminalSession"
+    },
+    {
+      "page_id": "page_audio_router",
+      "page_name": "audio_router",
+      "page_path": "page_audio_router/audio_router_page.py",
+      "page_class": "PageAudioRouter"
+    },
+    {
+      "page_id": "page_browserdock",
+      "page_name": "browser_bookmarks",
+      "page_path": "page_browserdock/browserdock_page.py",
+      "page_class": "PageBrowserdock"
+    },
+    {
+      "page_id": "page_linux_monitor_manager",
+      "page_name": "linux_monitor_manager",
+      "page_path": "page_linux_monitor_manager/linux_monitor_manager_page.py",
+      "page_class": "PageLinuxMonitorManager"
+    }
+  ]
+}
